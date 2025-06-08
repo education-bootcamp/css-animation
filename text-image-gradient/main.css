@@ -1,0 +1,15 @@
+h1 {
+    text-transform: uppercase;
+    font-size: 200px;
+    background: url("gradient.webp") center;
+    background-clip: text;
+    background-size: cover;
+    color: transparent;
+    animation: move 10s linear infinite;
+}
+
+@keyframes move {
+    to{
+        background-position-x: -500px;
+    }
+}
