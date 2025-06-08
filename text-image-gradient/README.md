@@ -1,35 +1,65 @@
-# Gradient Text Animation
+# 🎨 CSS Gradient Text Animation (One File)
 
-This project demonstrates an animated gradient effect applied to text using pure HTML and CSS. The effect leverages `background-clip: text` and a CSS animation to create a moving gradient across large, uppercase heading text.
+This project showcases a beautiful **animated gradient text effect** using **only one HTML file** — no external CSS or image files needed.
 
-## Features
+📺 **YouTube Demo:**  
+👉 [Watch on YouTube Shorts](https://www.youtube.com/shorts/LAXBUzY3NGk?feature=share)
 
-- Large, uppercase heading (`<h1>`)
-- Animated gradient background clipped to text
-- Smooth infinite horizontal animation
+---
 
-## Files
+## 🚀 Features
 
-- `index.html`: Contains the basic HTML structure and heading element.
-- `main.css`: Includes the CSS for styling and animating the text.
-- `gradient.webp`: The gradient image used for the background.
+- ✅ One-file solution (HTML + CSS combined)
+- ✅ Pure HTML and CSS — no JavaScript
+- ✅ Smooth infinite gradient animation
+- ✅ Fully responsive using `vw` units
 
-## Setup Instructions
+---
 
-1. **Clone or download the project** to your local machine.
-2. **Ensure the `gradient.webp` file** is placed in the same directory as `main.css`.
-3. **Open `index.html`** in your web browser to view the animation.
+## 📄 One File Code
 
-## Example Output
+Copy and paste this into a file named `index.html`:
 
-The heading "Hi Team" will appear in large letters with a colorful gradient smoothly moving across the text.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gradient Text Animation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
-## Customization
+    h1 {
+      text-transform: uppercase;
+      font-size: 15vw;
+      background: linear-gradient(90deg, #ff6ec4, #7873f5, #6ed3cf, #ff6ec4);
+      background-size: 300%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: move 6s linear infinite;
+    }
 
-- Change the `font-size` in `main.css` to resize the heading.
-- Replace `gradient.webp` with any other image to use a different gradient or texture.
-- Adjust the animation duration (`10s`) or background movement (`-500px`) for different effects.
-
-## License
-
-This project is open for personal and educational use. Modify it as you like!
+    @keyframes move {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hi Team</h1>
+</body>
+</html>
