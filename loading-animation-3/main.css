@@ -1,0 +1,46 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000;
+}
+.outer{
+    position: relative;
+    display: flex;
+    align-items: inherit;
+    justify-content: inherit;
+    width: 350px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 16px;
+}
+.outer img{
+    position: relative;
+    z-index: 1;
+}
+.outer::before{
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 600px;
+    background: linear-gradient(
+    #0dee0f, #ff144a
+    );
+    animation: rotate 5s linear infinite;
+}
+.outer::after{
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background-color: #fff;
+    border-radius: 16px;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
